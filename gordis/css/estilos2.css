@@ -1,0 +1,84 @@
+@import url(https://fontlibrary.org/face/segment14);
+
+
+
+#player {
+    height: 90%;
+  width:90%;
+  min-height:100px;
+  margin:auto;
+  padding:1em;
+  border:1px solid #666666;
+  border-radius:.3em;
+  background: linear-gradient(to bottom, #666666 0%,#000000 100%);
+}
+
+#lcd {
+  font-family:'Orbitron', sans-serif;
+  font-family:'Segment14Regular', sans-serif;
+  font-size:3em;
+  text-transform: uppercase;
+  height:1.0em;
+  overflow:hidden;
+  white-space: nowrap;
+  margin-bottom:0;
+  padding:.1em;
+  background:#000;
+  color:#FFF;
+  border:1px solid #999999;
+}
+#lcd p {
+    font-size: 30px;
+    color: red;
+  margin:0;
+  padding:0;
+  animation:mueveTexto 4s infinite alternate;
+}
+@keyframes mueveTexto {
+  from {
+    transform:translateX(20%);
+  }
+  to {
+    transform:translateX(0%);
+  }
+}
+
+#progreso {
+  font-size:3em;
+  height:3px;
+  padding:.1em;
+  background:#111111;
+  border:1px solid #999999;
+  border-top:none;
+  cursor: pointer;
+  cursor: hand;
+}
+
+#controls {
+  text-align:center;
+}
+
+#lista {
+  font-family:'Orbitron', sans-serif;
+  text-align:center;
+  width:100%;
+  height:auto;
+  max-height:1000px;
+  opacity:1;
+  padding:0.1em;
+  background:#000000;
+  color:#FFFFFF;
+  overflow-y:auto;
+  cursor: pointer;
+  cursor: hand;
+  transition:opacity 1s ease-out, max-height 1s ease-out;
+}
+#lista.listaOculta {
+  max-height:0;
+  opacity:0;
+  transition:max-height 1s ease-out, opacity 1s ease-out;
+}
+
+.oculto {
+  display:none;
+}

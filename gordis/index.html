@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/estilos.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="./css/estilos2.css">
+	<title id="inicio" >mi gordis</title>
+
+</head>
+<body >
+	<header>
+		<div class="contenedor">
+			
+<img src="./img/logo.png" class="logotipo">	
+<div class="reproductor">
+	<div id="player">
+		<div id="lcd"><p>&nbsp;</p></div>
+		<div id="progreso" onclick="irAPosicion(event)"></div>
+		<audio id="song" ontimeupdate="actualizarProgreso()" onended=finReproduccion()></audio>
+		<div id="controls">
+		  <button id="play" onclick="reproducir()"><i class="fa fa-play"></i></button>
+		  <button id="pause" class="oculto" onClick="pausar()"><i class="fa fa-pause"></i></button>
+		  <button id="stop" onClick="detener()"><i class="fa fa-stop"></i></button>
+		  <button id="prev" onClick="anterior()"><i class="fa fa-step-backward"></i></button>
+		  <button id="atras" onClick="atras()"><i class="fa fa-backward"></i></button>
+		  <button id="adelante" onClick="adelante()"><i class="fa fa-forward"></i></button>
+		  <button id="next" onClick="siguiente()"><i class="fa fa-step-forward"></i></button>
+		</div>
+		<select multiple id="lista" class="listaOculta" onChange="reproducirLista()"></select>
+	  </div>
+	</div>
+<nav>
+				<a href="index.html#titulo123" class="activo" >Inicio</a>
+
+				<a href="index.html#fotos">Fotos</a>
+				<a href="index.html#nuestra321">Historia</a>
+				
+				<a href="index.html#nosotros1">Nosotros</a>
+				<a href="index.html#secreto">Secreto</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<div class="pelicula-principal" id="titulo123">
+			<div class="contenedor">
+				<h3 class="titulo" >Paola Bolivar</h3>
+				<p class="descripcion">
+					Una persona ejemplar, desde mi punto de vista dare un....
+				</p>
+				<a href="index.html#detalle">							<button role="button" class="boton"><i class="fas fa-info-circle"></i>Mas sobre ella</button>
+				</a>
+			</div>
+		</div>
+		<div><br><br><br><hr><br><br><br></div>
+		<div class="contenedor2" id="detalle">
+			<h3 class="titulo2">Descripcion</h3>
+			<div class="contenedor2p">
+				 <p class="descripcion">
+<strong>Resumen:</strong> <br> Mujer guerrera, trabajadora, una mujer que siente un amor incondicional por sus nenes y su familia. Alguien con gran deseo de superacion , sin miedo al trabajo, sin miedo a las horas extras
+no importa las circunstancias si debes hacer algo los haces! ademas de ser una mujer muy tierna en el fondo que siente empatia por los demas, muy alegre,jodedora alguien de mente abierta , madura fisicamente hermosa,sentimentalmente bella y muchas cosas mas! que poco a poco ire descubriendo ❤️ ❤️ . <br>
+                           <br> <strong >❤️ ❤️ ❤️ ❤️Pero especialmente alguien que nunca deja de sorprender ❤️ ❤️ ❤️ ❤️ </strong>
+		</p>
+			</div>
+		</div>
+		<div><br><br><br><hr><br><br><br></div>
+
+
+		<div class="peliculas-recomendadas contenedor" id="fotos">
+			<div class="contenedor-titulo-controles">
+				<h3>Algunas fotos de mi</h3><br>
+				<div class="indicadores"></div>
+			</div>
+			<div class="contenedor-principal" >
+				<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+				<div class="contenedor-carousel">
+					<div class="carousel">
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/1.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/2.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/3.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/4.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/5.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/6.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/7.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/nomaquillaje.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/8.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/9.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/10.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/11.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/12.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/13.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/14.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/15.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/16.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/17.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/18.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/19.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="index.html#fotos"><img src="img/20.jpg" alt=""></a>
+						</div>
+					</div>
+				</div>
+
+				<button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+			</div>
+
+
+<br><br> <hr>
+
+<a href="index.html#inicio"><button>arriba</button></a>		</div>
+
+
+
+<div class="pelicula-principal2" id="nuestra321" >
+	<div class="contenedor">
+		<h3 class="titulo">Nuestra Historia </h3>
+		<p class="descripcion">
+			Todo comenzo aquella noche, cuando una persona acompa&ntilde;ada de una hermosa mujer, entonces solo pude....
+		</p>
+				<a href="index.html#nuestrahistoria">	<button role="button" class="boton"><i class="fas fa-info-circle"></i>Mas sobre nosotros</button> </a>
+	</div>
+</div>
+<br><br><br>
+<hr>
+<div><br><br><br></div>
+<div class="contenedor2">
+	<h3 class="titulo2" id="nuestrahistoria">Nuestra Historia</h3>
+	<div class="contenedor2p">
+		 <p class="descripcion">
+Todo comenzo aquella noche, cuando una persona acompa&ntilde;ada de una hermosa mujer, entonces solo pude quedarme observandola por momentos ya que dicha belleza hacia que me sonrojara o me sonnegrara y podria darse de cuenta.
+luego de ese dia , solo podia pensar en la chica que acompa&ntilde;aba a la otra persona, cuando normalmente nunca haria eso. Pero no podia sacarla de mi mente, con aquella esperanza de que estuviera cerca y lograr conocerla aunque sea un poco.
+Pasaron los dias, y volvio! mi corazon latio fuerte de alegria, mas aun cuando dijo que se arrendaria aqui. Pero habia un arduo trabajo antes de que eso ocurriera, colocamos manos a la obra para que fuera lo mas pronto posible.
+Cuando el espacio estuvo en buenas condiciones, procedi a darle la noticia! inmensamente feliz por dentro y esperando su mudanza,pero pasaria un largo tiempo hasta que eso ocurriera. Los dias se hacian largo, esperando el momento. Hasta que un dia, el momento esperado llego!
+la forma en que le di la bienvenida fue con algo de des-dietacion  😆 , y ella que lo recibio de la mejor forma. Dicho dia tuve el placer de conversar por primera vez con ella y conocerla un poco, debo decir mas que su fisico tambien la mentalidad y actitud  me encantaron.
+Siguieron pasando los dias, y poco a poco fui conociendola mas. Debo admitir que desde el dia uno me llamo la atencion, pero a medida que fui conociendola comenzo a gustarme.
+Pasado unas semanas, ya no habia dudas! estaba enamorado de ella, pero aunque yo sentia eso no me atrevia a dar ningun paso ya que no sabia si ella sentia algo similar por mi.
+Pasado algunos meses, el sentimiento no desaparecia al contrario mienstras mas la conocia o me relacionaba con ella mas me enamoraba de ella, pero nuevamente no me atrevia a nada.
+Hasta que cierta noche ocurrio algo particular! muy tarde en la noche recibo un mensaje de su parte, "podria subir al techo por favor?" y sin malas intenciones mi respuesta fue "no hay problema", aunque me parecia extra&ntilde;o siendo por ella acepte sin dudar.
+Esa noche en el techo comenzamos a hablar de distintas cosas, que nunca antes habiamos conversado por telefono. Pero ademas de eso, yo senti un aura diferente debido a que estaba con alguien que de verdad me gusta en un lugar tranquilo y frezco hablando sobre distintos temas, aunque tambien pudo ser mi imaginacion (mas adelante me entero de que ambos sentimos lo mismo) fue nuestro <strong>"Click".</strong>
+Desde aquella noche, algo cambio y poco a poco comenzamos a conocer mucho mas uno del otro. Siguio transcurriendo el tiempo, cada dia la conocia un poco mas y mi gusto por ella aumentaba, hasta que cierto dia le propuse para "ver algunas peliculas y comer veneno (dorito+refresco)"
+y ella acepto, eso provoco en mi una felicidad enorme. Exactamente el <strong>10 de noviembre</strong>, ese dia arregle todo en la noche,nos acomodamos en el mueble y comenzamos a ver. Aunque el momento era muy especial para mi, notaba que ella por dentro sentia algo diferente, luego de algunas horas ya en la madrugada ella poso su cabeza en mis piernas y sucumbio rapidamente por el sue&ntilde;o .
+Cuando la me di cuenta y voltee a ver, solo me quede embobecido viendola dormida. Procedi a tomar su mano para que no se le resbalara y despertara, y a acariciar su cabello para que durmiera relajada, todo el tiempo hasta que desperto. Solo puedo decir que ese dia me encanto mucho e hizo crecer exponencialmente mis sentimientos por ella.
+Pasaron algunos dias, y conversando me agradece por ese dia tan bonito, y me comenta que estaba pasando por algo y necesitaba compa&ntilde;ia y que yo estuve para ella en en el momento correcto, no hay palabra que expliquen lo que senti en ese momento...
+Pasado otros dias, exactamente el <strong>14 de Noviembre</strong>, entre tantas cosas que hablamos tomo valentia y le digo <strong>"y si te digo que me gustas 😳  😳  😳  😳  🙈 ?"</strong> y ella me responde: <strong>"Es enserio Ale? O es chalequeo?"</strong> incluso por mi inseguridad no respondi de inmediato, sino hasta mas tarde que le dije que no era broma, era la verdad.
+Comenzamos a hablar sobre el tema, le conte mi historia, desde el dia uno me llamo la atencion, y a medida que la fui conociendo cada aspecto de ella tanto positivo como negativo me gustaba y ademas las otras circunstancias que se presentario avivo aun mas dicho sentimiento hasta que simplemente no pude ocultarlo, luego ella procedio a contarme tambien lo que sentia.
+Parece ser que ambos sentiamos lo mismo por el otro, tanto lo bueno (AMOR) como lo malo (MIEDO), ya que ambos nos habiamos cerrado a ese mundo. Pero por mi parte vi en ella lo que no vi en nadie mas y esa era la razon por el cual todas mis emociones y sentimiento por ella. Ella igual!!! la emocion, alegria y otras cosas que no pueden ser explicadas se presentaron todas juntas.
+Desde entonces nuestra relacion inicio como tal!, poco a poco, de forma sincera pero con sobre mucho, muchisimo amor y cari&ntilde;o por el otro. Cada dia que pasaba, cada conversacion, visita o el simple hecho de verla aunque sea un momento, alegra mi corazon de una forma indescriptible.
+Llegado el <strong>01 de Diciembre</strong> oficialmente me le declaro, pidiendole oficialmente ser novios! , la felicidad que ambos sentimos fue increible. Logramos dar otro pasito mas en lo que deseamos a futuro 🙏🏼.
+Pasaron otros maravillosos dias, y tuvimos nuestra primera salidad el <strong>11 de Diciembre</strong> a un lugar cercano. Pasamos un lindo dia ya que en tanto tiempo nunca lo habiamos hecho!.
+Continuo pasando el tiempo, sintiendome como el hombre mas feliz de la tierra por semejante mujer que no solo me hace compa&ntilde;ia sino que me apoya y me ayuda siempre que puede. Visitas, peliculas y muchos dulces , siempre que puedo llevarle algun detalle lo hago nada me hace mas feliz que verla feliz a ella ❤️‍🔥.
+Llegado el <strong>01 de Enero</strong> celebramos nuestro primer mes, mi propuesta fue ir todos! a comer pizza para celebrar juntos ella acepto con gran alegria mi propuesta. Fue un dia maravilloso, comimos, conversamos, nos divertimos los ni&ntilde;os igual fue una maravillosa experiencia para mi, en mi mente pensaba : "asi se siente salir en familia con tu novia? se siente demasiado bien".
+Otros dias mas pasaron, debo decir que todos fueron muy bonitos siempre que compartiera con ella o la viera ya hacia de mis dias un maravilloso dia ❤️‍🔥.
+Llega el <strong>11 de Enero</strong> tenia dias ya planificando para que salieramos a probar algunas malteadas, se dio el dia y procedimos. Su carita de felicidad ese dia no tenia comparacion, si ella esta feliz yo igual!!!
+Llega nuestro segundo cumple-mes <strong>01 de Febrero</strong> dada ciertas circunstancias no pudimos salir, pero al menos pude darle un detalle que le alegro, a pesar de la situacion por la que estaba pasando esos dias contaba con mi apoyo  🙏🏼.
+Otros dias mas transcurren, y se presenta una situacion..
+Hoy <strong>14 DE Febrero</strong>, aunque para mi cualquier dia es bueno para regalar y para demostrar tu amor o afecto por otros, te hago este detalle a ti.
+<br><br><strong>"ERES UNA MUJER INCREIBLE, NO TIENES IDEA DE LO AFORTUNADO QUE SOY EN LA VIDA POR DISFRUTRAR DE TU COMPA&Ntilde;IA Y APOYO. ERES LA MUJER DE MIS SUE&Ntilde;OS Y NI LA VIDA ENTERA ME ALCANZARA PARA DEMOSTRAR POR COMPLETO LO QUE SIENTO POR TI, NO HAY DIA QUE NO PIENSE EN TI, NI TAMPOCO DIA QUE NO QUIERA ESTAR CONTIGO REPRESENTAS MUCHO PARA MI  🌝 PAOLA BOLIVAR 🌚  DE VERDAD QUE ERES EL AMOR DE MI VIDA ❤️‍🔥"</strong>
+
+</p>
+	</div>
+</div>
+
+<div><br><br><br><br><br><hr><br><br><br><br><br></div>
+
+
+<div class="peliculas-recomendadas2 contenedor">
+	<div class="contenedor-titulo-controles">
+		<h3>Algunas fotos de nosotros</h3>
+		<div class="indicadores2"></div>
+	</div>
+	<div class="contenedor-principal" id="nosotros1">
+		<button role="button" id="flecha-izquierda2" class="flecha-izquierda2"><i class="fas fa-angle-left"></i></button>
+
+		<div class="contenedor-carousel2">
+			<div class="carousel2">
+				<div class="pelicula2">
+					<a href="https://www.google.co.ve"><img src="img/abrazo1.jpg" alt=""></a>
+				</div>
+				<div class="pelicula2">
+					<a href="https://www.google.co.ve"><img src="img/abrazo2.jpg" alt=""></a>
+				</div>
+				<div class="pelicula2">
+					<a href="#"><img src="img/abrazo3.jpg" alt=""></a>
+				</div>
+				<div class="pelicula2">
+					<a href="#"><img src="img/abrazo4.jpg" alt=""></a>
+				</div>
+				<div class="pelicula2">
+					<a href="#"><img src="img/abrazo5.jpg" alt=""></a>
+				</div>
+				<div class="pelicula2">
+					<a href="#"><img src="img/aniversario10T.jpg" alt=""></a>
+				</div>
+				<div class="pelicula2">
+					<a href="#"><img src="img/aniversario13pyo.jpg" alt=""></a>
+				</div>
+				<div class="pelicula2">
+					<a href="https://www.google.co.ve"><img src="img/aniversario14N.jpg" alt=""></a>
+				</div>
+				<div class="pelicula2">
+					<a href="#"><img src="img/aniversario5.jpg" alt=""></a>
+				</div>
+				<div class="pelicula2">
+					<a href="#"><img src="img/aniversario7N.jpg" alt=""></a>
+				</div>
+				<div class="pelicula2">
+					<a href="https://www.google.co.ve"><img src="img/abrazo6.jpg" alt=""></a>
+				</div>
+				<div class="pelicula2">
+					<a href="#"><img src="img/abrazo7.jpg" alt=""></a>
+				</div>
+				<div class="pelicula2">
+					<a href="#"><img src="img/abrazo8.jpg" alt=""></a>
+				</div>
+				<div class="pelicula2">
+					<a href="#"><img src="img/aniversario2.jpg" alt=""></a>
+				</div>
+				<div class="pelicula2">
+					<a href="#"><img src="img/aniversario3.jpg" alt=""></a>
+				</div>
+				<div class="pelicula2">
+					<a href="#"><img src="img/aniversario9T.jpg" alt=""></a>
+				</div>
+				<div class="pelicula2">
+					<a href="#"><img src="img/aniversario6.jpg" alt=""></a>
+				</div>
+				<div class="pelicula2">
+					<a href="https://www.google.co.ve"><img src="img/ella cargando.jpg" alt=""></a>
+				</div>
+				<div class="pelicula2">
+					<a href="#"><img src="img/yocargando.jpg" alt=""></a>
+				</div>
+				<div class="pelicula2">
+					<a href="#"><img src="img/isaac.jpg" alt=""></a>
+				</div>
+				<div class="pelicula2">
+					<a href="#"><img src="img/trigus.jpg" alt=""></a>
+				</div>
+			</div>
+		</div>
+
+		<button role="button" id="flecha-derecha2" class="flecha-derecha2"><i class="fas fa-angle-right"></i></button>
+	</div>
+
+	<a href="#"><button>arriba</button></a>	
+<br><br><br><hr> <br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br><br><br><hr><br>
+
+
+<div class="contenedor2" id="detalle">
+	<div class="contenedor2p">
+<img src="./img/secreto.gif" alt="" class="img2" id="secreto">
+	</div>
+</div>
+
+
+
+
+<a href="#"><button>arriba</button></a>		</div>
+
+	</main>
+	
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+<script src="./js/main2.js"></script>
+
+
+</body>
+</html>
